@@ -10,4 +10,11 @@ def load_data(file_path):
 
 data = load_data("data/Titanic-Dataset.csv")
 
-print(data)
+def survivors(data):
+    if data is not None:
+        survived_count = data["Survived"].sum()
+        print(f"Number of survivors: {survived_count}")
+    else:
+        print("Data is None. Cannot compute.")
+
+survivors(data)
